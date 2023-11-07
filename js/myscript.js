@@ -1,22 +1,57 @@
+"use strict"
+
 const pricePerKm = 0.21;
 const discount18 = 20;
+const discount18Name = "Agevolato";
 const discount65 = 40;
-let userKm = document.getElementById("km-distance");
-let userAge = document.getElementById("user-age");
+const discount65Name = "Super Risparmio";
+const userKm = document.getElementById("km-distance");
+const userAge = document.getElementById("user-age");
+const userFirstName = document.getElementById("user-first-name");
+const userLastName = document.getElementById("user-last-name");
+const elementTicket = document.getElementById("ticket-template");
+const elementPassengerNameField = document.getElementById("passenger-name-field");
+const elementDiscountField = document.getElementById("discount-field");
+const elementCabField = document.getElementById("cab-field");
+const elementCpCodeField = document.getElementById("cp-code-field");
 const generateButton = document.getElementById("generate-button");
+const resetButton = document.getElementById("reset-button");
+const elementTicketPrice = document.getElementById("ticket-price-field");
 let ticketPrice = 0;
+
 
 generateButton.addEventListener("click",
     function () {
-        console.log("I km sono", Number(userKm.value));
-        console.log("L'età è", Number(userAge.value));
-        console.log("Il prezzo per km è", pricePerKm);
+        elementTicket.classList.add("d-block");
+        elementTicket.classList.remove("d-none");
         ticketPrice = Number(userKm.value) * pricePerKm;
-        if (Number(userAge.value) < 18) {
+        if (userAge.value === "1") {
             ticketPrice = ticketPrice - (ticketPrice * discount18 / 100);
-        } else if (Number(userAge.value) >= 65) {
+            elementDiscountField.innerHTML = discount18Name;
+        } else if (userAge.value === "3") {
             ticketPrice = ticketPrice - (ticketPrice * discount65 / 100);
+            elementDiscountField.innerHTML = discount65Name;
+        } else {
+            ticketPrice = ticketPrice;
+            elementDiscountField.innerHTML = "Regular";
         }
 
-        console.log("Il prezzo del tuo biglietto è: ", Number(ticketPrice.toFixed(2)));
+        elementPassengerNameField.innerHTML = userFirstName.value + " " + userLastName.value;
+        elementCabField.innerHTML = Math.floor(Math.random() * 20);
+        elementCpCodeField.innerHTML = Math.floor(Math.random() * 10000);
+        elementTicketPrice.innerHTML = ticketPrice.toFixed(2);
+
+
     });
+
+resetButton.addEventListener("click",
+    function () {
+        elementTicket.classList.add("d-none");
+        elementTicket.classList.remove("d-block");
+    });
+
+
+
+
+
+

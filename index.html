@@ -32,16 +32,115 @@
 <body>
 
     <!-- Header -->
-    <header>
+    <header class="d-flex justify-content-center">
+        <div class="img-container">
+            <img src="img/logo.svg" alt="logo">
+        </div>
 
     </header>
     <!-- /Header -->
 
     <!-- Main -->
     <main>
-        <input type="number" name="" id="km-distance" value="">
-        <input type="number" name="" id="user-age">
-        <button id="generate-button">Genera biglietto</button>
+        <div id="teacher-banner" class="d-none">
+            <h1>IMPARA A SCRIVERE!</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col12 p-5">
+                    <div class="ticket-dashboard card p-3">
+                        <div class="card-body">
+                            <h2 class="text-center text-uppercase mb-5 fs-4 fw-normal">Inserisci i dati per generare il
+                                tuo
+                                biglietto
+                            </h2>
+                            <form class="row g-3" id="my-form">
+                                <div class="col12 col-md-6 col-lg">
+                                    <label for="user-first-name" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="user-first-name">
+                                </div>
+                                <div class="col12 col-md-6 col-lg">
+                                    <label for="user-last-name" class="form-label">Cognome</label>
+                                    <input type="text" class="form-control" id="user-last-name">
+                                </div>
+                                <div class="col12 col-md-6 col-lg">
+                                    <label for="user-age">Fascia d'età</label>
+                                    <select class="form-select mt-2" id="user-age">
+                                        <option selected>Scegli...</option>
+                                        <option value="1">Minorenne</option>
+                                        <option value="2">Maggiorenne</option>
+                                        <option value="3">Vecchietto</option>
+                                    </select>
+                                </div>
+                                <div class="col12 col-md-6 col-lg">
+                                    <label for="km-distance" class="form-label">Km da percorrere</label>
+                                    <input type="number" class="form-control" id="km-distance" step="0.1">
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                            Accetta i <a href="#">Termini e condizioni
+                                                di
+                                                utilizzo</a>.
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex gap-3">
+
+                                    <button type="reset" class="btn btn-warning" id="reset-button">Annulla</button>
+                                </div>
+                            </form>
+                            <button id="generate-button" type="submit" class="btn btn-primary mt-4">Genera
+                                biglietto</button>
+                        </div>
+                    </div>
+                    <div id="ticket-template" class="d-none">
+                        <h2 class="mt-5 text-center text-uppercase">Ecco il tuo biglietto!</h2>
+                        <div class="card mt-5 p-3">
+                            <div class="card-body d-flex">
+                                <div class="col">
+                                    <div class="barcode-container">
+                                        <img src="img/barcode.jpg" alt="barcode">
+                                    </div>
+                                </div>
+                                <div class="passenger-ticket-info col d-flex flex-column justify-content-evenly ps-5">
+                                    <div class="name-row">
+                                        <span class="badge bg-primary text-uppercase me-3">Nome passeggero</span>
+                                        <h3 id="passenger-name-field" class="d-inline"></h3>
+                                    </div>
+                                    <div class="discount-row">
+                                        <span class="badge bg-success text-uppercase me-3">Tipologia
+                                            offerta</span>
+                                        <h3 id="discount-field" class="d-inline">Regular</h3>
+                                    </div>
+                                    <div class="cab-row">
+                                        <span class="badge bg-warning text-uppercase me-3"
+                                            style="color: black;">Carrozza</span>
+                                        <h3 class="d-inline" id="cab-field"></h3>
+                                    </div>
+                                    <div class="cp-code-row">
+                                        <span class="badge bg-light text-uppercase me-3" style="color: black">Codice
+                                            CP</span>
+                                        <h3 class="d-inline" id="cp-code-field"></h3>
+                                    </div>
+                                </div>
+                                <div class="col-3 d-flex flex-column justify-content-end">
+                                    <h3 class="text-end">Buon viaggio!</h3>
+                                    <div class="card">
+                                        <div class="card-body text-end">
+                                            <h2 class="currency-type fs-1 fw-bold d-inline">€</h2>
+                                            <span class="ticket-price fw-bold" id="ticket-price-field"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </main>
     <!-- /Main -->

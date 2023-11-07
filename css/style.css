@@ -1,0 +1,100 @@
+/* #region VARIABLES */
+
+/* #endregion VARIABLES */
+
+/* #region TYPOGRAPHY */
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* #endregion TYPOGRAPHY */
+
+/* #region COMMON */
+
+input[type="number"]::-webkit-inner-spin-button {
+    cursor: pointer;
+}
+
+/* #endregion COMMON */
+
+/* #region HEADER */
+
+header .img-container {
+    margin-top: -100px;
+    margin-bottom: -150px;
+    width: 50%;
+}
+
+
+/* #endregion HEADER */
+
+/* #region MAIN */
+
+body {
+    background-color: rgb(211, 242, 255);
+}
+
+.container .ticket-dashboard {
+    border-radius: 10px;
+}
+
+.container .ticket-dashboard h2 {
+    color: gray;
+}
+
+.container #ticket-template h2 {
+    color: #2677BD;
+}
+
+.container .row .col12 .card {
+    width: 100%;
+}
+
+.container #ticket-template .card {
+    background: rgb(44, 119, 189);
+    background: linear-gradient(270deg, rgba(44, 119, 189, 1) 0%, rgba(111, 189, 255, 1) 100%);
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+
+.container #ticket-template .col:nth-of-type(1) {
+    flex-grow: 0;
+
+}
+
+.container #ticket-template .barcode-container {
+    border-radius: 10px;
+    width: 200px;
+    overflow: hidden;
+}
+
+.container #ticket-template .currency-type {
+    color: white;
+}
+
+.container #ticket-template .ticket-price {
+    font-size: 4rem;
+}
+
+.container #ticket-template .passenger-ticket-info span {
+    font-size: 1.25rem;
+}
+
+
+
+/* #endregion MAIN */
+
+/* #region FOOTER */
+
+/* #endregion FOOTER */
+
+/* #region MEDIA QUERIES */
+
+/* #endregion MEDIA QUERIES */
