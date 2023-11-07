@@ -62,4 +62,4 @@ Andiamo adesso a stilizzare la nostra pagina, andando a racchiudere gli input in
 
 # RIFLESSIONI DOPO LO SVOLGIMENTO
  
- Dopo aver svolto l'esercizio, mi sono trovato a dover cambiare approccio diverse volte. Nello specifico, ho evitato la convalida dei dati tramite **!isNaN** in quanto abbiamo utilizzato un dropdown per la selezione dell'età, e un campo di input numerico per i km da percorrere. La creazione del template del biglietto ha comportato anche la dichiarazione di variabili che prima non avevo considerato.
+ Dopo aver svolto l'esercizio, mi sono trovato a dover cambiare approccio diverse volte. Nello specifico, ho evitato la convalida dei dati tramite **!isNaN** in quanto abbiamo utilizzato un dropdown per la selezione dell'età, e un campo di input numerico per i km da percorrere. Ho quindi usato una validazione per valore di **userKm** maggiore di 0. La creazione del template del biglietto ha comportato anche la dichiarazione di variabili che prima non avevo considerato e ho riesplorato le classi di bootstrap che mi hanno permesso di fare un'interfaccia e un biglietto responsive.
