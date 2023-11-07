@@ -57,3 +57,9 @@ Se **userAge** non rientra nelle due condizioni, **ticketPrice** sarà stampato 
 ## MILESTONE 2:
 
 Andiamo adesso a stilizzare la nostra pagina, andando a racchiudere gli input in form in modo da poter rendere funzionante il pulsante di reset che andremo ad implementare. Possiamo andare ad aggiungere delle funzioni di calcolo di numeri randomici per inserire informazioni nel biglietto come il n° della carrozza e il n° del biglietto. Andremo ad implementare un pulsante che genererà il biglietto e ce lo farà visualizzare al di sotto del form. A questo punto potremo dare colore e struttura ai nostri elementi HTML tramite il CSS e il nostro generatore sarà pronto.
+
+------
+
+# RIFLESSIONI DOPO LO SVOLGIMENTO
+ 
+ Dopo aver svolto l'esercizio, mi sono trovato a dover cambiare approccio diverse volte. Nello specifico, ho evitato la convalida dei dati tramite **!isNaN** in quanto abbiamo utilizzato un dropdown per la selezione dell'età, e un campo di input numerico per i km da percorrere. La creazione del template del biglietto ha comportato anche la dichiarazione di variabili che prima non avevo considerato.

@@ -32,9 +32,12 @@
 <body>
 
     <!-- Header -->
+    <div id="teacher-banner" class="d-none justify-content-center align-items-center">
+        <h1>MA MI PRENDI IN GIRO? <br> ORA PER PUNIZIONE RICARICA LA PAGINA</h1>
+    </div>
     <header class="d-flex justify-content-center">
         <div class="img-container">
-            <img src="img/logo.svg" alt="logo">
+            <img src="img/logo.png" alt="logo">
         </div>
 
     </header>
@@ -42,9 +45,6 @@
 
     <!-- Main -->
     <main>
-        <div id="teacher-banner" class="d-none">
-            <h1>IMPARA A SCRIVERE!</h1>
-        </div>
         <div class="container">
             <div class="row">
                 <div class="col12 p-5">
@@ -74,7 +74,8 @@
                                 </div>
                                 <div class="col12 col-md-6 col-lg">
                                     <label for="km-distance" class="form-label">Km da percorrere</label>
-                                    <input type="number" class="form-control" id="km-distance" step="0.1">
+                                    <input type="number" class="form-control" id="km-distance" step="0.1" min="1"
+                                        max="5">
                                 </div>
                                 <div class="col-12">
                                     <div class="form-check">
@@ -98,34 +99,37 @@
                     <div id="ticket-template" class="d-none">
                         <h2 class="mt-5 text-center text-uppercase">Ecco il tuo biglietto!</h2>
                         <div class="card mt-5 p-3">
-                            <div class="card-body d-flex">
-                                <div class="col">
-                                    <div class="barcode-container">
+                            <div class="card-body d-flex flex-column flex-xl-row">
+                                <div class="col d-flex justify-content-center">
+                                    <div class="barcode-container-tilted d-none d-xl-block">
                                         <img src="img/barcode.jpg" alt="barcode">
                                     </div>
+                                    <div class="barcode-container d-block d-xl-none">
+                                        <img src="img/barcode2.jpg" alt="barcode">
+                                    </div>
                                 </div>
-                                <div class="passenger-ticket-info col d-flex flex-column justify-content-evenly ps-5">
+                                <div
+                                    class="passenger-ticket-info col gap-5 d-flex flex-column justify-content-evenly mt-5 mt-xl-0 ps-5">
                                     <div class="name-row">
                                         <span class="badge bg-primary text-uppercase me-3">Nome passeggero</span>
-                                        <h3 id="passenger-name-field" class="d-inline"></h3>
+                                        <h3 id="passenger-name-field" class="d-block d-xl-inline mt-3 m-xl-0"></h3>
                                     </div>
                                     <div class="discount-row">
                                         <span class="badge bg-success text-uppercase me-3">Tipologia
                                             offerta</span>
-                                        <h3 id="discount-field" class="d-inline">Regular</h3>
+                                        <h3 id="discount-field" class="d-block d-xl-inline mt-3 m-xl-0">Regular</h3>
                                     </div>
                                     <div class="cab-row">
-                                        <span class="badge bg-warning text-uppercase me-3"
-                                            style="color: black;">Carrozza</span>
-                                        <h3 class="d-inline" id="cab-field"></h3>
+                                        <span class="badge bg-warning text-uppercase me-3">Carrozza</span>
+                                        <h3 class="d-block d-xl-inline mt-3 m-xl-0" id="cab-field"></h3>
                                     </div>
                                     <div class="cp-code-row">
-                                        <span class="badge bg-light text-uppercase me-3" style="color: black">Codice
+                                        <span class="badge bg-light text-uppercase me-3">Codice
                                             CP</span>
-                                        <h3 class="d-inline" id="cp-code-field"></h3>
+                                        <h3 class="d-block d-xl-inline mt-3 m-xl-0" id="cp-code-field"></h3>
                                     </div>
                                 </div>
-                                <div class="col-3 d-flex flex-column justify-content-end">
+                                <div class="col12 col-xl-3 mt-5 mt-xl-0 d-flex flex-column justify-content-end">
                                     <h3 class="text-end">Buon viaggio!</h3>
                                     <div class="card">
                                         <div class="card-body text-end">
