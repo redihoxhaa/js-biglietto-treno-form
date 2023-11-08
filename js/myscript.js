@@ -22,16 +22,17 @@ let ticketPrice = 0;
 
 
 generateButton.addEventListener("click",
-    function () {
+    function (event) {
+        event.preventDefault()
         if (userKm.value > 0) {
             elementTicket.classList.add("d-block");
             elementTicket.classList.remove("d-none");
             ticketPrice = Number(userKm.value) * pricePerKm;
             if (userAge.value === "1") {
-                ticketPrice = ticketPrice - (ticketPrice * discount18 / 100);
+                ticketPrice -= ticketPrice * discount18 / 100;
                 elementDiscountField.innerHTML = discount18Name;
             } else if (userAge.value === "3") {
-                ticketPrice = ticketPrice - (ticketPrice * discount65 / 100);
+                ticketPrice -= ticketPrice * discount65 / 100;
                 elementDiscountField.innerHTML = discount65Name;
             } else {
                 ticketPrice = ticketPrice;
