@@ -24,6 +24,7 @@ let ticketPrice = 0;
 generateButton.addEventListener("click",
     function (event) {
         event.preventDefault()
+        elementDiscountField.innerHTML = "Regular";
         if (userKm.value > 0) {
             elementTicket.classList.add("d-block");
             elementTicket.classList.remove("d-none");
@@ -34,9 +35,6 @@ generateButton.addEventListener("click",
             } else if (userAge.value === "3") {
                 ticketPrice -= ticketPrice * discount65 / 100;
                 elementDiscountField.innerHTML = discount65Name;
-            } else {
-                ticketPrice = ticketPrice;
-                elementDiscountField.innerHTML = "Regular";
             }
 
             elementPassengerNameField.innerHTML = userFirstName.value + " " + userLastName.value;
